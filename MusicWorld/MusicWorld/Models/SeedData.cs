@@ -22,10 +22,12 @@ namespace MusicWorld.Models
                 context.Songs.AddRange(
                     new Song
                     {
-                        Title = "",
-                        Artists = "",
-                        Author = "",
-                        UrlImage = ""
+                        Title = "Đường Đến Vinh Quang",
+                        Artists = "Trần Lập",
+                        Author = "Bức Tường",
+                        UrlImage = "TranLap_1.jpg",
+                        Category = "Rock"
+                        
                     });
 
             }
@@ -34,41 +36,16 @@ namespace MusicWorld.Models
                 context.Artists.AddRange(
                     new Artists
                     {
-                        Name = "",
-                        Birthday = "",
-                        Gender = "",
-                        Contact = "",
-                        UrlImage = ""
+                        Name = "Trần Lập",
+                        Birthday = "12/12/1974",
+                        Gender = "Nam",
+                        Contact = "tranlap.com",
+                        UrlImage = "TranLap.jpg"
                     });
             }
-            if (!context.Albums.Any())
-            {
-                context.Albums.AddRange(
-                    new Album
-                    {
-                        Title = "",
-                        Description = "",
-                        Artists = "",
-                        Place = "",
-                        StartingDate = "",
-                        UrlImage = ""
-                    });
-            }
-            if (!context.Events.Any())
-            {
-                context.Events.AddRange(
-                    new Event
-                    {
-                        Title = "",
-                        Description = "",
-                        Artists = "",
-                        TicketPrice = "",
-                        Place = "",
-                        StartingDate = "",
-                        UrlImage = ""
-                    });
-            }
+            context.SaveChanges();
         }
+        
     }
    
 }

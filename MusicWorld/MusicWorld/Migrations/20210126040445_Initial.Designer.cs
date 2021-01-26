@@ -9,7 +9,7 @@ using MusicWorld.Models;
 namespace MusicWorld.Migrations
 {
     [DbContext(typeof(MusicDbContext))]
-    [Migration("20210126020528_Initial")]
+    [Migration("20210126040445_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -33,10 +33,7 @@ namespace MusicWorld.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Place")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("StartingDate")
+                    b.Property<string>("Songs")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")
@@ -121,6 +118,9 @@ namespace MusicWorld.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Author")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Category")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")

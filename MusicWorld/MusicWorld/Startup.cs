@@ -60,6 +60,7 @@ namespace MusicWorld
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+            SeedData.EnsurePopulate(app);
         }
     }
 }

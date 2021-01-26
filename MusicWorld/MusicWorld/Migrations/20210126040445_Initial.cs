@@ -15,8 +15,7 @@ namespace MusicWorld.Migrations
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Artists = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Place = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    StartingDate = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Songs = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UrlImage = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
@@ -68,6 +67,7 @@ namespace MusicWorld.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Artists = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Category = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Author = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UrlImage = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },

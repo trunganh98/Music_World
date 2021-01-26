@@ -31,10 +31,7 @@ namespace MusicWorld.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Place")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("StartingDate")
+                    b.Property<string>("Songs")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")
@@ -119,6 +116,9 @@ namespace MusicWorld.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Author")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Category")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")

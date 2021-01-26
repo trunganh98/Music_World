@@ -11,9 +11,12 @@ namespace MusicWorld.Models
         public long Id { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
-        public string Artists { get; set; }
-        public string Songs { get; set; }
+      
+        
         [Display(Name = "Image")]
         public string UrlImage { get; set; }
+
+        public Song Songs { get; set; }
+        public Artists Artists { get; set; }
     }
 }

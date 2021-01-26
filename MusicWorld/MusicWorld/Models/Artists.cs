@@ -15,5 +15,8 @@ namespace MusicWorld.Models
         public string Contact { get; set; }
         [Display(Name = "Image")]
         public string UrlImage { get; set; }
+
+        public ICollection<Album> Albums { get; set; }
+        public ICollection<Event> Events { get; set; }
     }
 }

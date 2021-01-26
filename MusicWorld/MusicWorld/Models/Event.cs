@@ -12,9 +12,6 @@ namespace MusicWorld.Models
         [Required]
         public string Title { get; set; }
         public string Description { get; set; }
-        [Required]
-        public string ArtistsID { get; set; }
-
         public string TicketPrice { get; set; }
         [Required]
         public string Place { get; set; }
@@ -22,5 +19,7 @@ namespace MusicWorld.Models
         public string StartingDate { get; set; }
         [Display(Name = "Image")]
         public string UrlImage { get; set; }
+
+        public Artists Artists { get; set; }
     }
 }

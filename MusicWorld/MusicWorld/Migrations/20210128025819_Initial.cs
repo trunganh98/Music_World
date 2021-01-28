@@ -10,11 +10,12 @@ namespace MusicWorld.Migrations
                 name: "Albums",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UrlImage = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    UrlImage = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ReleaseDate = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -25,7 +26,7 @@ namespace MusicWorld.Migrations
                 name: "Artists",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Birthday = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -42,7 +43,7 @@ namespace MusicWorld.Migrations
                 name: "Events",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -78,35 +79,11 @@ namespace MusicWorld.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Songs",
-                columns: table => new
-                {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Title = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Artists = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Category = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Author = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UrlImage = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    AlbumsId = table.Column<long>(type: "bigint", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Songs", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Songs_Albums_AlbumsId",
-                        column: x => x.AlbumsId,
-                        principalTable: "Albums",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "AlbumArtists",
                 columns: table => new
                 {
-                    AlbumsId = table.Column<long>(type: "bigint", nullable: false),
-                    ArtistsId = table.Column<long>(type: "bigint", nullable: false)
+                    AlbumsId = table.Column<int>(type: "int", nullable: false),
+                    ArtistsId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -126,11 +103,41 @@ namespace MusicWorld.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Songs",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Title = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Category = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Author = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UrlImage = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ArtistsId = table.Column<int>(type: "int", nullable: false),
+                    AlbumsId = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Songs", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Songs_Albums_AlbumsId",
+                        column: x => x.AlbumsId,
+                        principalTable: "Albums",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Songs_Artists_ArtistsId",
+                        column: x => x.ArtistsId,
+                        principalTable: "Artists",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "ArtistsEvent",
                 columns: table => new
                 {
-                    ArtistsId = table.Column<long>(type: "bigint", nullable: false),
-                    EventsId = table.Column<long>(type: "bigint", nullable: false)
+                    ArtistsId = table.Column<int>(type: "int", nullable: false),
+                    EventsId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -163,6 +170,11 @@ namespace MusicWorld.Migrations
                 name: "IX_Songs_AlbumsId",
                 table: "Songs",
                 column: "AlbumsId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Songs_ArtistsId",
+                table: "Songs",
+                column: "ArtistsId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -180,13 +192,13 @@ namespace MusicWorld.Migrations
                 name: "Users");
 
             migrationBuilder.DropTable(
-                name: "Artists");
-
-            migrationBuilder.DropTable(
                 name: "Events");
 
             migrationBuilder.DropTable(
                 name: "Albums");
+
+            migrationBuilder.DropTable(
+                name: "Artists");
         }
     }
 }

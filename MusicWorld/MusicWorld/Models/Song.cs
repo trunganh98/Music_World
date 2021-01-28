@@ -16,6 +16,6 @@ namespace MusicWorld.Models
         [Display(Name = "Image")]
         public string UrlImage { get; set; }
 
-        public ICollection<Album> Albums { get; set; }
+        public Album Albums { get; set; }
     }
 }

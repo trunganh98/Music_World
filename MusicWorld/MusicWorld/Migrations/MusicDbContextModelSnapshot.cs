@@ -19,48 +19,21 @@ namespace MusicWorld.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.2");
 
-            modelBuilder.Entity("AlbumArtists", b =>
-                {
-                    b.Property<int>("AlbumsId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ArtistsId")
-                        .HasColumnType("int");
-
-                    b.HasKey("AlbumsId", "ArtistsId");
-
-                    b.HasIndex("ArtistsId");
-
-                    b.ToTable("AlbumArtists");
-                });
-
-            modelBuilder.Entity("ArtistsEvent", b =>
-                {
-                    b.Property<int>("ArtistsId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("EventsId")
-                        .HasColumnType("int");
-
-                    b.HasKey("ArtistsId", "EventsId");
-
-                    b.HasIndex("EventsId");
-
-                    b.ToTable("ArtistsEvent");
-                });
-
             modelBuilder.Entity("MusicWorld.Models.Album", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
+                        .HasColumnType("bigint")
                         .UseIdentityColumn();
+
+                    b.Property<long?>("ArtistsId")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ReleaseDate")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<long?>("SongsId")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
@@ -70,14 +43,18 @@ namespace MusicWorld.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("ArtistsId");
+
+                    b.HasIndex("SongsId");
+
                     b.ToTable("Albums");
                 });
 
             modelBuilder.Entity("MusicWorld.Models.Artists", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
+                        .HasColumnType("bigint")
                         .UseIdentityColumn();
 
                     b.Property<string>("Birthday")
@@ -102,10 +79,13 @@ namespace MusicWorld.Migrations
 
             modelBuilder.Entity("MusicWorld.Models.Event", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
+                        .HasColumnType("bigint")
                         .UseIdentityColumn();
+
+                    b.Property<long?>("ArtistsId")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
@@ -130,21 +110,20 @@ namespace MusicWorld.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("ArtistsId");
+
                     b.ToTable("Events");
                 });
 
             modelBuilder.Entity("MusicWorld.Models.Song", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
+                        .HasColumnType("bigint")
                         .UseIdentityColumn();
 
-                    b.Property<int?>("AlbumsId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ArtistsId")
-                        .HasColumnType("int");
+                    b.Property<string>("Artists")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Author")
                         .HasColumnType("nvarchar(max)");
@@ -159,10 +138,6 @@ namespace MusicWorld.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("AlbumsId");
-
-                    b.HasIndex("ArtistsId");
 
                     b.ToTable("Songs");
                 });
@@ -206,61 +181,40 @@ namespace MusicWorld.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("AlbumArtists", b =>
+            modelBuilder.Entity("MusicWorld.Models.Album", b =>
                 {
-                    b.HasOne("MusicWorld.Models.Album", null)
-                        .WithMany()
-                        .HasForeignKey("AlbumsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("MusicWorld.Models.Artists", null)
-                        .WithMany()
-                        .HasForeignKey("ArtistsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("ArtistsEvent", b =>
-                {
-                    b.HasOne("MusicWorld.Models.Artists", null)
-                        .WithMany()
-                        .HasForeignKey("ArtistsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("MusicWorld.Models.Event", null)
-                        .WithMany()
-                        .HasForeignKey("EventsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("MusicWorld.Models.Song", b =>
-                {
-                    b.HasOne("MusicWorld.Models.Album", "Albums")
-                        .WithMany("Songs")
-                        .HasForeignKey("AlbumsId");
-
                     b.HasOne("MusicWorld.Models.Artists", "Artists")
-                        .WithMany("Songs")
-                        .HasForeignKey("ArtistsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .WithMany("Albums")
+                        .HasForeignKey("ArtistsId");
 
-                    b.Navigation("Albums");
+                    b.HasOne("MusicWorld.Models.Song", "Songs")
+                        .WithMany("Albums")
+                        .HasForeignKey("SongsId");
+
+                    b.Navigation("Artists");
+
+                    b.Navigation("Songs");
+                });
+
+            modelBuilder.Entity("MusicWorld.Models.Event", b =>
+                {
+                    b.HasOne("MusicWorld.Models.Artists", "Artists")
+                        .WithMany("Events")
+                        .HasForeignKey("ArtistsId");
 
                     b.Navigation("Artists");
                 });
 
-            modelBuilder.Entity("MusicWorld.Models.Album", b =>
-                {
-                    b.Navigation("Songs");
-                });
-
             modelBuilder.Entity("MusicWorld.Models.Artists", b =>
                 {
-                    b.Navigation("Songs");
+                    b.Navigation("Albums");
+
+                    b.Navigation("Events");
+                });
+
+            modelBuilder.Entity("MusicWorld.Models.Song", b =>
+                {
+                    b.Navigation("Albums");
                 });
 #pragma warning restore 612, 618
         }

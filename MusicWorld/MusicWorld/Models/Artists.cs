@@ -8,7 +8,7 @@ namespace MusicWorld.Models
 {
     public class Artists
     {
-        public int Id { get; set; }
+        public long Id { get; set; }
         public string Name { get; set; }
         public string Birthday { get; set; }
         public string Gender { get; set; }
@@ -16,7 +16,6 @@ namespace MusicWorld.Models
         [Display(Name = "Image")]
         public string UrlImage { get; set; }
 
-        public ICollection<Song> Songs { get; set; }
         public ICollection<Album> Albums { get; set; }
         public ICollection<Event> Events { get; set; }
     }

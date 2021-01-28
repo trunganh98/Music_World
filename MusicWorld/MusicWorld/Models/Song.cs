@@ -8,18 +8,14 @@ namespace MusicWorld.Models
 {
     public class Song
     {
-        public int Id { get; set; }
+        public long Id { get; set; }
         public string Title { get; set; }
-        
+        public string Artists { get; set; }
         public string Category { get; set; }
         public string Author { get; set; }
         [Display(Name = "Image")]
         public string UrlImage { get; set; }
 
-        public int ArtistsId { get; set; }
-
-        public Artists Artists { get; set; }
-
-        public Album Albums { get; set; }
+        public ICollection<Album> Albums { get; set; }
     }
 }

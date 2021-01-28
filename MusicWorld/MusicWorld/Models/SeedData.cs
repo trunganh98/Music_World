@@ -5,7 +5,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using MusicWorld.Models;
 
 namespace MusicWorld.Models
 {
@@ -18,74 +17,35 @@ namespace MusicWorld.Models
             {
                 context.Database.Migrate();
             }
-
-            if (context.Artists.Any())
+            if (!context.Songs.Any())
             {
-                return;
+                context.Songs.AddRange(
+                    new Song
+                    {
+                        Title = "Đường Đến Vinh Quang",
+                        Artists = "Trần Lập",
+                        Author = "Bức Tường",
+                        UrlImage = "TranLap_1.jpg",
+                        Category = "Rock"
+                        
+                    });
+
             }
-                var artists = new Artists[]
-                   {
-                        new Artists
-                        {
-                                Name = "Michael Jackson",
-                                Birthday = "29/8/1958",
-                                Gender = "Nam",
-                                Contact = "Michael Jackson.com",
-                                UrlImage = "MichaelJackson.jpg"
-                        },
-                        new Artists
-                        {
-                            Name = "Whitney Houston",
-                                Birthday = "9/8/1963",
-                                Gender = "Nữ",
-                                Contact = "WhitneyHouston.com",
-                                UrlImage = "WhitneyHouston.jpg"
-                        }
-                    };
-            
-            foreach (Artists a in artists)
+            if (!context.Artists.Any())
             {
-                context.Artists.Add(a);
-            }
-            context.SaveChanges();
-
-            var songs = new Song[]
-            {
-                new Song
-                {
-                        Title = "Get On The Floor",
-                        Author = "Michael Jackson",
-                        UrlImage = "OffTheWall.jpg",
-                        Category = "Pop",
-                        ArtistsId = artists.Single(a => a.Name == "Whitney Houston").Id
-                },
-                new Song
-                {
-                        Title = "Girlfriend",
-                  
-                        Author = "Michael Jackson",
-                        UrlImage = "OffTheWall.jpg",
-                        Category = "Pop",
-                        ArtistsId = artists.Single(a => a.Name == "Michael Jackson").Id
-                },
-                 new Song
-                {
-                        Title = "I Can Help It",
-                        Author = "Michael Jackson",
-                        UrlImage = "OffTheWall.jpg",
-                        Category = "Pop",
-                        ArtistsId = artists.Single(a => a.Name == "Michael Jackson").Id
-                }
-
-            };
-
-            foreach (Song s in songs)
-            {
-                context.Songs.Add(s);
+                context.Artists.AddRange(
+                    new Artists
+                    {
+                        Name = "Trần Lập",
+                        Birthday = "12/12/1974",
+                        Gender = "Nam",
+                        Contact = "tranlap.com",
+                        UrlImage = "TranLap.jpg"
+                    });
             }
             context.SaveChanges();
         }
-
+        
     }
-
+   
 }

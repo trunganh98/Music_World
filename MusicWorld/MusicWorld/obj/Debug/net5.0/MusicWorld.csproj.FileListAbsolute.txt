@@ -184,3 +184,4 @@ C:\Users\ASUS\Documents\GitHub\Music_World\MusicWorld\MusicWorld\obj\Debug\net5.
 C:\Users\ASUS\Documents\GitHub\Music_World\MusicWorld\MusicWorld\obj\Debug\net5.0\MusicWorld.genruntimeconfig.cache
 C:\Users\ASUS\Documents\GitHub\Music_World\MusicWorld\MusicWorld\obj\Debug\net5.0\Razor\Views\Shared\_LoginLayout.cshtml.g.cs
 C:\Users\ASUS\Documents\GitHub\Music_World\MusicWorld\MusicWorld\obj\Debug\net5.0\Razor\Views\Home\Login.cshtml.g.cs
+C:\Users\ASUS\Documents\GitHub\Music_World\MusicWorld\MusicWorld\obj\Debug\net5.0\Razor\Views\Home\Register.cshtml.g.cs

@@ -76,7 +76,7 @@
                                             <li><a href="blog.html">News</a></li>
                                             <li><a href="contact.html">Contact</a></li>
                                             <li><a href="elements.html">Elements</a></li>
-                                            <li><a href="login.html">Login</a></li>
+                                            <li><a asp-action="Login" asp-controller="Home" asp-route-category="">Login</a></li>
                                             <li>
                                                 <a href="#">Dropdown</a>
                                                 <ul class="dropdown">
@@ -107,7 +107,7 @@
                                 <div class="login-register-cart-button d-flex align-items-center">
                                     <!-- Login/Register -->
                                     <div class="login-register-btn mr-50">
-                                        <a href="login.html" id="loginBtn">Login / Register</a>
+                                        <a asp-action="Login" asp-controller="Home" asp-route-category="" id="loginBtn">Login / Register</a>
                                     </div>
 
                                     <!-- Cart Button -->
@@ -863,7 +863,7 @@
         <div class="container">
             <div class="row d-flex flex-wrap align-items-center">
                 <div class="col-12 col-md-6">
-                    <a href="#"><img src="/img/core-img/logo.png" alt=""></a>
+                    <a href="index.html"><h2 style="color:greenyellow">MUSIC WORLD</h2></a>
                     <p class="copywrite-text">
                         <a href="#">
                             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->

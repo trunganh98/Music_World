@@ -5,6 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Data\**" />
+    <Content Remove="Data\**" />
+    <EmbeddedResource Remove="Data\**" />
+    <None Remove="Data\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="wwwroot\.sass-cache\03465f23f19c9b31771cc8acec61089cccc1845c\style.scssc" />
     <None Include="wwwroot\.sass-cache\03465f23f19c9b31771cc8acec61089cccc1845c\_fonts.scssc" />
     <None Include="wwwroot\.sass-cache\03465f23f19c9b31771cc8acec61089cccc1845c\_mixin.scssc" />
@@ -25,10 +32,6 @@
     <None Include="wwwroot\.sass-cache\d85c8cf619ac1df897d554b9bf37f413df87287f\_mixin.scssc" />
     <None Include="wwwroot\.sass-cache\d85c8cf619ac1df897d554b9bf37f413df87287f\_responsive.scssc" />
     <None Include="wwwroot\.sass-cache\d85c8cf619ac1df897d554b9bf37f413df87287f\_theme_color.scssc" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Data\" />
   </ItemGroup>
 
   <ItemGroup>

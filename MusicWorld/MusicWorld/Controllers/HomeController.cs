@@ -12,7 +12,6 @@ namespace MusicWorld.Controllers
     public class HomeController : Controller
     {
         private IMusicReposity repository;
-        private readonly ILogger<HomeController> _logger;
 
         public HomeController( IMusicReposity repo)
         {

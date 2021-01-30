@@ -70,11 +70,11 @@
                                     <li>
                                         <a href="#">Pages</a>
                                         <ul class="dropdown">
-                                            <li><a href="index.html">Home</a></li>
+                                            <li><a asp-action="Index" asp-controller="Home" asp-route-category="">Home</a></li>
                                             <li><a href="albums-store.html">Albums</a></li>
                                             <li><a href="event.html">Events</a></li>
-                                            <li><a href="blog.html">News</a></li>
-                                            <li><a href="contact.html">Contact</a></li>
+                                            <li><a asp-action="News" asp-controller="Home" asp-route-category="">News</a></li>
+                                            <li><a asp-action="Contact" asp-controller="Home" asp-route-category="">Contact</a></li>
                                             <li><a href="elements.html">Elements</a></li>
                                             <li><a asp-action="Login" asp-controller="Home" asp-route-category="">Login</a></li>
                                             <li>
@@ -99,8 +99,8 @@
                                         </ul>
                                     </li>
                                     <li><a href="event.html">Events</a></li>
-                                    <li><a href="blog.html">News</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a asp-action="News" asp-controller="Home" asp-route-category="">News</a></li>
+                                    <li><a asp-action="Contact" asp-controller="Home" asp-route-category="">Contact</a></li>
                                 </ul>
 
                                 <!-- Login/Register & Cart Button -->
@@ -877,11 +877,11 @@
                 <div class="col-12 col-md-6">
                     <div class="footer-nav">
                         <ul>
-                            <li><a href="#">Home</a></li>
+                            <li><a asp-action="Index" asp-controller="Home" asp-route-category="">Home</a></li>
                             <li><a href="#">Albums</a></li>
                             <li><a href="#">Events</a></li>
-                            <li><a href="#">News</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a asp-action="News" asp-controller="Home" asp-route-category="">News</a></li>
+                            <li><a asp-action="Contact" asp-controller="Home" asp-route-category="">Contact</a></li>
                         </ul>
                     </div>
                 </div>

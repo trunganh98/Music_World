@@ -259,3 +259,7 @@ D:\Users\FPT\Semester3\Music_World--Right\MusicWorld\MusicWorld\obj\Debug\net5.0
 D:\Users\FPT\Semester3\Music_World--Right\MusicWorld\MusicWorld\obj\Debug\net5.0\ref\MusicWorld.dll
 D:\Users\FPT\Semester3\Music_World--Right\MusicWorld\MusicWorld\obj\Debug\net5.0\MusicWorld.pdb
 D:\Users\FPT\Semester3\Music_World--Right\MusicWorld\MusicWorld\obj\Debug\net5.0\MusicWorld.genruntimeconfig.cache
+C:\Users\ASUS\Documents\GitHub\Music_World\MusicWorld\MusicWorld\obj\Debug\net5.0\Razor\Views\Home\Contact.cshtml.g.cs
+C:\Users\ASUS\Documents\GitHub\Music_World\MusicWorld\MusicWorld\obj\Debug\net5.0\Razor\Views\Shared\_Contact.cshtml.g.cs
+C:\Users\ASUS\Documents\GitHub\Music_World\MusicWorld\MusicWorld\obj\Debug\net5.0\Razor\Views\Home\News.cshtml.g.cs
+C:\Users\ASUS\Documents\GitHub\Music_World\MusicWorld\MusicWorld\obj\Debug\net5.0\Razor\Views\Shared\_NewsLayout.cshtml.g.cs

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WFCrVUdAXJ6sPcvchqWzm4qIit5sVBo5jUJuAJUWPj5wI4LKTx10wpiRZr6yDfOO6D8TOE2c8iLKpz4ZmQggug==",
+  "dgSpecHash": "1FryavOlZf3rHrUGjW1fC6vuvL6XWKRMlXjZypbmGLNhfqmI/USLbKfWGqLD76nwNQ9C+NHA+VVI5RD6bVvQbw==",
   "success": true,
-  "projectFilePath": "D:\\Users\\FPT\\Semester3\\Music_World--Right\\MusicWorld\\MusicWorld\\MusicWorld.csproj",
+  "projectFilePath": "D:\\Users\\Music_World--Right\\MusicWorld\\MusicWorld\\MusicWorld.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

@@ -22,14 +22,22 @@ namespace MusicWorld.Controllers
         public IActionResult Index() => View(
             new ProductListViewModel
             {
-                Songs = repository.Songs,
-                Events = repository.Events,
-                Albums = repository.Albums
+              
+                Songs = repository.Songs
+                .OrderBy(p => p.Id)
+                .Take(6),
+                Events = repository.Events
                 .OrderBy(p => p.Id)
                 .Take(5),
+                Albums = repository.Albums
+                .OrderBy(p => p.Id)
+                .Take(12),
                 Artists = repository.Artists
-                            
-                
+                .OrderBy(p => p.Id)
+                .Take(6)
+
+
+
             });
                 
 

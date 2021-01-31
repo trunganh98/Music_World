@@ -21,11 +21,11 @@ ol {
   ul li,
   ol li {
     list-style: none; }
-
+/*
 img {
   height: auto;
   max-width: 100%; }
-
+*/
 .bg-img {
   background-position: center center;
   background-size: cover;

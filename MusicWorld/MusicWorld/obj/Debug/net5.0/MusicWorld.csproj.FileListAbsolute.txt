@@ -267,3 +267,8 @@ C:\Users\ASUS\Documents\GitHub\Music_World\MusicWorld\MusicWorld\obj\Debug\net5.
 C:\Users\ASUS\Documents\GitHub\Music_World\MusicWorld\MusicWorld\obj\Debug\net5.0\Razor\Views\Home\News.cshtml.g.cs
 C:\Users\ASUS\Documents\GitHub\Music_World\MusicWorld\MusicWorld\obj\Debug\net5.0\Razor\Views\Shared\_NewsLayout.cshtml.g.cs
 >>>>>>> aaf6bd120c04b31cb922bac339c0b6e81887ac68
+D:\Users\FPT\Semester3\Music_World--Right\MusicWorld\MusicWorld\obj\Debug\net5.0\Razor\Views\Home\Contact.cshtml.g.cs
+D:\Users\FPT\Semester3\Music_World--Right\MusicWorld\MusicWorld\obj\Debug\net5.0\Razor\Views\Home\News.cshtml.g.cs
+D:\Users\FPT\Semester3\Music_World--Right\MusicWorld\MusicWorld\obj\Debug\net5.0\Razor\Views\Shared\_Contact.cshtml.g.cs
+D:\Users\FPT\Semester3\Music_World--Right\MusicWorld\MusicWorld\obj\Debug\net5.0\Razor\Views\Shared\_NewsLayout.cshtml.g.cs
+D:\Users\FPT\Semester3\Music_World--Right\MusicWorld\MusicWorld\obj\Debug\net5.0\Razor\Views\Home\Event.cshtml.g.cs

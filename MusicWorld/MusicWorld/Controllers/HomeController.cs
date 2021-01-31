@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using MusicWorld.Models;
+using MusicWorld.Models.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -18,10 +19,22 @@ namespace MusicWorld.Controllers
             repository = repo;
         }
 
-        public IActionResult Index()
-        {
-            return View(repository.Songs);
-        }
+        public IActionResult Index() => View(
+            new ProductListViewModel
+            {
+                Songs = repository.Songs,
+                Events = repository.Events,
+                Albums = repository.Albums
+                .OrderBy(p => p.Id)
+                .Take(5),
+                Artists = repository.Artists
+                            
+                
+            });
+                
+
+
+
 
         public IActionResult Privacy()
         {
@@ -47,6 +60,7 @@ namespace MusicWorld.Controllers
         {
             return View();
         }
+     
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

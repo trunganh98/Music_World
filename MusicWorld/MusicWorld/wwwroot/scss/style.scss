@@ -79,6 +79,7 @@ img {
     max-width: 100%;
 }
 
+
 /* :: 3.1.0 Spacing */
 
 .mt-15 {
@@ -805,7 +806,7 @@ img {
     z-index: 1;
     @include trans-duration(500ms);
     img {
-        width: 100%;
+       /* width: 100%;*/
     }
     .event-text {
         text-align: center;

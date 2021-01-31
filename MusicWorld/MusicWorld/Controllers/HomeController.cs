@@ -68,7 +68,28 @@ namespace MusicWorld.Controllers
         {
             return View();
         }
-     
+
+        public IActionResult Album() => View(
+            new ProductListViewModel
+            {
+
+                Songs = repository.Songs
+                .OrderBy(p => p.Id)
+                .Take(6),
+                Events = repository.Events
+                .OrderBy(p => p.Id)
+                .Take(5),
+                Albums = repository.Albums
+                .OrderBy(p => p.Id)
+                .Take(12),
+                Artists = repository.Artists
+                .OrderBy(p => p.Id)
+                .Take(6)
+
+
+
+            });
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

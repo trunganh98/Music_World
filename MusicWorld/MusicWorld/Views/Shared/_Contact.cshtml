@@ -47,7 +47,7 @@
                     <nav class="classy-navbar justify-content-between" id="oneMusicNav">
 
                         <!-- Nav brand -->
-                        <a href="index.html" class="nav-brand"><img src="img/core-img/logo.png" alt=""></a>
+                        <a asp-action="Index" asp-controller="Home" asp-route-category="" class="nav-brand"><h2 style="color:greenyellow">MUSIC WORLD</h2></a>
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
@@ -107,7 +107,8 @@
                                 <div class="login-register-cart-button d-flex align-items-center">
                                     <!-- Login/Register -->
                                     <div class="login-register-btn mr-50">
-                                        <a href="login.html" id="loginBtn">Login / Register</a>
+                                        <a asp-action="Login" asp-controller="Home" asp-route-category="" id="loginBtn">Login </a>
+                                        <a asp-action="Register" asp-controller="Home" asp-route-category="" id="loginBtn">/ Register</a>
                                     </div>
 
                                     <!-- Cart Button -->

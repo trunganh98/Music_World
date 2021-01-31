@@ -259,3 +259,4 @@ D:\Users\FPT\Semester3\Music_World--Right\MusicWorld\MusicWorld\obj\Debug\net5.0
 D:\Users\FPT\Semester3\Music_World--Right\MusicWorld\MusicWorld\obj\Debug\net5.0\ref\MusicWorld.dll
 D:\Users\FPT\Semester3\Music_World--Right\MusicWorld\MusicWorld\obj\Debug\net5.0\MusicWorld.pdb
 D:\Users\FPT\Semester3\Music_World--Right\MusicWorld\MusicWorld\obj\Debug\net5.0\MusicWorld.genruntimeconfig.cache
+D:\Users\FPT\Semester3\Music_World--Right\MusicWorld\MusicWorld\obj\Debug\net5.0\MusicWorld.csprojAssemblyReference.cache

@@ -158,3 +158,5 @@ C:\Users\ASUS\Documents\GitHub\Music_World\MusicWorld\MusicWorld\obj\Debug\net5.
 C:\Users\ASUS\Documents\GitHub\Music_World\MusicWorld\MusicWorld\obj\Debug\net5.0\MusicWorld.genruntimeconfig.cache
 C:\Users\ASUS\Documents\GitHub\Music_World\MusicWorld\MusicWorld\obj\Debug\net5.0\Razor\Views\Home\Album.cshtml.g.cs
 C:\Users\ASUS\Documents\GitHub\Music_World\MusicWorld\MusicWorld\obj\Debug\net5.0\Razor\Views\Shared\_AlbumLayout.cshtml.g.cs
+D:\Users\Music_World--Right\MusicWorld\MusicWorld\obj\Debug\net5.0\Razor\Views\Home\Album.cshtml.g.cs
+D:\Users\Music_World--Right\MusicWorld\MusicWorld\obj\Debug\net5.0\Razor\Views\Shared\_AlbumLayout.cshtml.g.cs

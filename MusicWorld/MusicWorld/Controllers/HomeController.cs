@@ -74,16 +74,16 @@ namespace MusicWorld.Controllers
             {
 
                 Songs = repository.Songs
-                .OrderBy(p => p.Id)
+                .OrderBy(a => a.Id)
                 .Take(6),
                 Events = repository.Events
-                .OrderBy(p => p.Id)
+                .OrderBy(a => a.Id)
                 .Take(5),
                 Albums = repository.Albums
-                .OrderBy(p => p.Id)
+                .OrderBy(a => a.Id)
                 .Take(12),
                 Artists = repository.Artists
-                .OrderBy(p => p.Id)
+                .OrderBy(a => a.Id)
                 .Take(6)
 
 

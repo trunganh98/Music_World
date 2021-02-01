@@ -158,3 +158,10 @@ C:\Users\ASUS\Documents\GitHub\Music_World\MusicWorld\MusicWorld\obj\Debug\net5.
 C:\Users\ASUS\Documents\GitHub\Music_World\MusicWorld\MusicWorld\obj\Debug\net5.0\MusicWorld.genruntimeconfig.cache
 C:\Users\ASUS\Documents\GitHub\Music_World\MusicWorld\MusicWorld\obj\Debug\net5.0\Razor\Views\Home\Album.cshtml.g.cs
 C:\Users\ASUS\Documents\GitHub\Music_World\MusicWorld\MusicWorld\obj\Debug\net5.0\Razor\Views\Shared\_AlbumLayout.cshtml.g.cs
+C:\Users\ASUS\Documents\GitHub\Music_World\MusicWorld\MusicWorld\obj\Debug\net5.0\Razor\Views\Shared\_AlbumsCloneLayout.cshtml.g.cs
+C:\Users\ASUS\Documents\GitHub\Music_World\MusicWorld\MusicWorld\obj\Debug\net5.0\Razor\Views\Albums\Rap.cshtml.g.cs
+C:\Users\ASUS\Documents\GitHub\Music_World\MusicWorld\MusicWorld\obj\Debug\net5.0\Razor\Views\Albums\Ballad.cshtml.g.cs
+C:\Users\ASUS\Documents\GitHub\Music_World\MusicWorld\MusicWorld\obj\Debug\net5.0\Razor\Views\Albums\Classsical.cshtml.g.cs
+C:\Users\ASUS\Documents\GitHub\Music_World\MusicWorld\MusicWorld\obj\Debug\net5.0\Razor\Views\Albums\Jazz.cshtml.g.cs
+C:\Users\ASUS\Documents\GitHub\Music_World\MusicWorld\MusicWorld\obj\Debug\net5.0\Razor\Views\Albums\Pop.cshtml.g.cs
+C:\Users\ASUS\Documents\GitHub\Music_World\MusicWorld\MusicWorld\obj\Debug\net5.0\Razor\Views\Albums\Rock.cshtml.g.cs

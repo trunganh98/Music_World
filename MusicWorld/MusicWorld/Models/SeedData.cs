@@ -17,13 +17,60 @@ namespace MusicWorld.Models
             {
                 context.Database.Migrate();
             }
-            if (context.Artists.Any())
+            if (context.Events.Any())
             {
                 return;
             }
 
             var events = new Event[]
            {
+               new Event
+                {
+                    Title = "Kỉ Niệm 151 năm Sinh LEHAR",
+                    Description = "",
+                    TicketPrice = "100000",
+                    Place = "Hà Nội",
+                    StartingDate = "3/10/2019",
+                     UrlImage = "sk1.png"
+
+                },
+                new Event
+                {
+                    Title = "Kỉ Niệm 188 năm sinh BARAHMS",
+                    Description = "",
+                    TicketPrice = "100000",
+                    Place = "Nha Trang",
+                    StartingDate = "3/10/2019",
+                     UrlImage = "sk2.jpg"
+
+                },
+                new Event
+                {
+                    Title = "Kỉ Niệm 188 năm sinh MASSENET",
+                    Description = "",
+                    TicketPrice = "100000",
+                    Place = "Phú Xuyên",
+                    StartingDate = "3/10/2019",
+                     UrlImage = "sk3.jpg"
+                },
+                new Event
+                {
+                    Title = "Kỉ Niệm 188 năm sinh ALBENIZ",
+                    Description = "",
+                    TicketPrice = "100000",
+                    Place = "HN",
+                    StartingDate = "3/10/2019",
+                     UrlImage = "sk4.jpg"
+                },
+                new Event
+                {
+                    Title = "Kỉ Niệm 190 năm sinh MASSENET",
+                    Description = "",
+                    TicketPrice = "100000",
+                    Place = "Nha Trang",
+                    StartingDate = "3/10/2019",
+                     UrlImage = "sk5.png"
+                },
                 new Event {
                   Title = "Đại Nhạc Hội REALME",
                     Description = "",
@@ -172,7 +219,10 @@ namespace MusicWorld.Models
                 context.Events.Add(e);
             }
             context.SaveChanges();
-
+            if (context.Artists.Any())
+            {
+                return;
+            }
             var artists = new Artists[]
                {
                     new Artists
@@ -359,6 +409,48 @@ namespace MusicWorld.Models
                             Contact = "soobin.vn",
                             UrlImage = "soobinhoangson.jpg",
                             EventId = events.Single(e => e.Title == "Dạ khúc cho tình nhân").Id
+                        },
+                        new Artists
+                        {
+                                Name = "YO YO MA",
+                                Birthday = "7/10/1955",
+                                Gender = "Nam",
+                                UrlImage = "yoma.jpg",
+                                 EventId = events.Single(e=> e.Title == "Kỉ Niệm 151 năm Sinh LEHAR").Id
+
+                        },
+                        new Artists
+                        {
+                                Name = "Jacques Loussier Trio",
+                                Birthday = "26/10/1934",
+                                Gender = "Nam",
+                                UrlImage = "trio.jpg",
+                                EventId = events.Single(e=> e.Title == "Kỉ Niệm 188 năm sinh BARAHMS").Id
+                        },
+                        new Artists
+                        {
+                             Name = "Artur Rubinstein",
+                                Birthday = "28/1/1887",
+                                Gender = "Nam",
+                                UrlImage = "rubinstein.jpg",
+                                EventId = events.Single(e=> e.Title == "Kỉ Niệm 188 năm sinh MASSENET").Id
+                        },
+                        new Artists
+                        {
+                             Name = "Jean François Paillard",
+                                Birthday = "14/4/1928",
+                                Gender = "Nam",
+                                UrlImage = "paillard.jpg",
+                                EventId = events.Single(e=> e.Title == "Kỉ Niệm 188 năm sinh ALBENIZ").Id
+                        },
+                        new Artists
+                        {
+                            Name = "Alicia De Larrocha",
+                                Birthday = "23/5/1923",
+                                Gender = "Nữ",
+                                UrlImage = "larrocha.jpg",
+                                EventId = events.Single(e=> e.Title == "Kỉ Niệm 190 năm sinh MASSENET").Id
+
                         }
                 };
 
@@ -367,7 +459,10 @@ namespace MusicWorld.Models
                 context.Artists.Add(a);
             }
             context.SaveChanges();
-
+            if (context.Albums.Any())
+            {
+                return;
+            }
             var albums = new Album[]
             {
                 new Album
@@ -456,31 +551,13 @@ namespace MusicWorld.Models
                 context.Albums.Add(a);
             }
             context.SaveChanges();
-
+            if (context.Songs.Any())
+            {
+                return;
+            }
             var songs = new Song[]
             {
                
-               
-               
-                
-                 new Song
-                {
-                        Title = "Big City Boy",
-                        Author = "BinZ",
-                        UrlImage = "BigCityBoy.jpg",
-                        Category = "Rap",
-                        ArtistsId = artists.Single(a => a.Name == "BinZ").Id,
-                        AlbumsId = albums.Single(a => a.Title == "Top Trending youtube").Id
-                },
-                 new Song
-                {
-                        Title = "They Said",
-                        Author = "BinZ",
-                        UrlImage = "TheySaid.jpg",
-                        Category = "Rap",
-                        ArtistsId = artists.Single(a => a.Name == "BinZ").Id,
-                        AlbumsId = albums.Single(a => a.Title == "Top Trending youtube").Id
-                },
                  new Song
                 {
                         Title = "OK",
@@ -495,7 +572,7 @@ namespace MusicWorld.Models
                         Title = "Yêu em quá đi",
                         Author = "Karik",
                         UrlImage = "Yeuemquadi.jpg",
-                        Category = "Rap",
+                        Category = "Pop",
                         ArtistsId = artists.Single(a => a.Name == "Karik").Id,
                         AlbumsId = albums.Single(a => a.Title == "Rap Việt hay").Id
                 },
@@ -504,7 +581,7 @@ namespace MusicWorld.Models
                         Title = "Từng là tất cả",
                         Author = "Karik",
                         UrlImage = "Tunglatatca.jpg",
-                        Category = "Rap",
+                        Category = "Pop",
                         ArtistsId = artists.Single(a => a.Name == "Karik").Id,
                         AlbumsId = albums.Single(a => a.Title == "Rap Việt hay").Id
                 },
@@ -513,45 +590,8 @@ namespace MusicWorld.Models
                         Title = "Không ổn",
                         Author = "Karik",
                         UrlImage = "Khongon.jpg",
-                        Category = "Rap",
+                        Category = "Pop",
                         ArtistsId = artists.Single(a => a.Name == "Karik").Id,
-                        AlbumsId = albums.Single(a => a.Title == "Top Trending youtube").Id
-                },
-               
-                 new Song
-                {
-                        Title = "Yêu 5",
-                        Author = "Rhymastic",
-                        UrlImage = "Yeu5.jpg",
-                        Category = "Rap",
-                        ArtistsId = artists.Single(a => a.Name == "Rhymastic").Id,
-                        AlbumsId = albums.Single(a => a.Title == "Top Trending youtube").Id
-                },
-                  new Song
-                {
-                        Title = "Nến và Hoa",
-                        Author = "Rhymastic",
-                        UrlImage = "NenvaHoa.jpg",
-                        Category = "Rap",
-                        ArtistsId = artists.Single(a => a.Name == "Rhymastic").Id,
-                        AlbumsId = albums.Single(a => a.Title == "Top Trending youtube").Id
-                },
-                   new Song
-                {
-                        Title = "Đã lỡ yêu em nhiều",
-                        Author = "Justatee",
-                        UrlImage = "Justatee.jpg",
-                        Category = "Rap",
-                        ArtistsId = artists.Single(a => a.Name == "Justatee").Id,
-                        AlbumsId = albums.Single(a => a.Title == "Rap Việt hay").Id
-                },
-                    new Song
-                {
-                        Title = "Forever Alone",
-                        Author = "Justatee",
-                        UrlImage = "Justatee.jpg",
-                        Category = "Rap",
-                        ArtistsId = artists.Single(a => a.Name == "Justatee").Id,
                         AlbumsId = albums.Single(a => a.Title == "Top Trending youtube").Id
                 },
                      new Song
@@ -559,7 +599,7 @@ namespace MusicWorld.Models
                         Title = "Crying Over You",
                         Author = "Justatee",
                         UrlImage = "Crying.jpg",
-                        Category = "Rap",
+                        Category = "Pop",
                         ArtistsId = artists.Single(a => a.Name == "Justatee").Id,
                         AlbumsId = albums.Single(a => a.Title == "Rap Việt hay").Id
                 },
@@ -617,11 +657,77 @@ namespace MusicWorld.Models
                         ArtistsId = artists.Single(a => a.Name == "Wowy").Id,
                         AlbumsId = albums.Single(a => a.Title == "Top Trending youtube").Id
                 },
+                        new Song {
+                  Title = "Một Bước Yêu Vạn Dặm Đau",
+                    Author = "Mr.siro",
+                    UrlImage = "mrsiro_1.jpg",
+                    Category = "Ballad",
+                    ArtistsId = artists.Single(a => a.Name == "Mr.siro").Id,
+                    AlbumsId = albums.Single(a => a.Title == "Top HITS của năm").Id
+
+                },
+                new Song {
+                  Title = "Lắng Nghe Nước Mắt",
+                    Author = "Mr.siro",
+                    UrlImage = "mrsiro_2.jpg",
+                    Category = "Ballad",
+                    ArtistsId = artists.Single(a => a.Name == "Mr.siro").Id,
+                    AlbumsId = albums.Single(a => a.Title == "Những bản nhạc việt hiện đại").Id
+
+                },
+                new Song {
+                  Title = "Chiều nay không có mưa bay",
+                    Author = "Trung Quân",
+                    UrlImage = "trungquan_1.jpg",
+                    Category = "Ballad",
+                    ArtistsId = artists.Single(a => a.Name == "Trung Quân").Id,
+                    AlbumsId = albums.Single(a => a.Title == "Những bài hát được nghe nhiều").Id
+                },
+                new Song {
+                  Title = "Dấu Mưa",
+                    Author = "Trung Quân",
+                    UrlImage = "trungquan_2.jpg",
+                    Category = "Balland",
+                    ArtistsId = artists.Single(a => a.Name == "Trung Quân").Id,
+                    AlbumsId = albums.Single(a => a.Title == "Những bài hát được nghe nhiều").Id
+                },
+                new Song {
+                  Title = "Bèo dạt mây trôi",
+                    Author = "Trần Mạnh Tuấn",
+                    UrlImage = "Tranmanhtuan_1.jpg",
+                    Category = "Jazz",
+                    ArtistsId = artists.Single(a => a.Name == "Trần Mạnh Tuấn").Id,
+                    AlbumsId = albums.Single(a => a.Title == "Những bản nhạc jazz hay nhất").Id
+                },
+                new Song {
+                  Title = "Quê Hương",
+                    Author = "Trần Mạnh Tuấn",
+                    UrlImage = "Tranmanhtuan_2.jpg",
+                    Category = "Jazz",
+                    ArtistsId = artists.Single(a => a.Name == "Trần Mạnh Tuấn").Id,
+                    AlbumsId = albums.Single(a => a.Title == "Những bản nhạc jazz hay nhất").Id
+                },
+                new Song {
+                  Title = "Đường Đến Vinh Quang",
+                    Author = "Trần Lập",
+                    UrlImage = "TranLap_1.jpg",
+                    Category = "Rock",
+                    ArtistsId = artists.Single(a => a.Name == "Trần Lập").Id,
+                    AlbumsId = albums.Single(a => a.Title == "Chặng Đường Rock Việt").Id
+                },
+                new Song {
+                  Title = "Tâm Hồn Của Đá ",
+                    Author = "Trần Lập",
+                    UrlImage = "TranLap_2.jpg",
+                    Category = "Rock",
+                    ArtistsId = artists.Single(a => a.Name == "Trần Lập").Id,
+                    AlbumsId = albums.Single(a => a.Title == "Chặng Đường Rock Việt").Id
+                },
                 new Song {
                   Title = "Bao giờ lấy chồng",
                     Author = "Bích Phương",
                     UrlImage = "bichphuong_3.jpg",
-                    Category = "Balland",
+                    Category = "Ballad",
                     ArtistsId = artists.Single(a => a.Name == "Bích Phương").Id,
                     AlbumsId = albums.Single(a => a.Title == "Những bản nhạc việt hiện đại").Id
                 },
@@ -629,7 +735,7 @@ namespace MusicWorld.Models
                   Title = "Em bỏ hút thuốc chưa",
                     Author = "Bích Phương",
                     UrlImage = "bichphuong_5.jpg",
-                    Category = "Balland",
+                    Category = "Ballad",
                     ArtistsId = artists.Single(a => a.Name == "Bích Phương").Id,
                     AlbumsId = albums.Single(a => a.Title == "Những bản nhạc việt hiện đại").Id
                 }

@@ -31,7 +31,7 @@ namespace MusicWorld.Models
                     TicketPrice = "100000",
                     Place = "Hà Nội",
                     StartingDate = "3/10/2019",
-                     UrlImage = "sk1.png"
+                     UrlImage = "sk1.jpg"
 
                 },
                 new Event
@@ -69,7 +69,7 @@ namespace MusicWorld.Models
                     TicketPrice = "100000",
                     Place = "Nha Trang",
                     StartingDate = "3/10/2019",
-                     UrlImage = "sk5.png"
+                     UrlImage = "sk5.jpg"
                 },
                 new Event {
                   Title = "Đại Nhạc Hội REALME",
@@ -738,7 +738,18 @@ namespace MusicWorld.Models
                     Category = "Ballad",
                     ArtistsId = artists.Single(a => a.Name == "Bích Phương").Id,
                     AlbumsId = albums.Single(a => a.Title == "Những bản nhạc việt hiện đại").Id
+                },
+                 new Song
+                {
+                        Title = "The Legend of 1900 Playing love",
+                        Author = "YO YO MA",
+                        UrlImage = "baihat3.jpg",
+                        Category = "Classical",
+                        ArtistsId = artists.Single(a => a.Name == "YO YO MA").Id,
+                        AlbumsId = albums.Single(a => a.Title == "Những Bản nhạc cổ điển hay").Id
+
                 }
+              
 
             };
             foreach (Song s in songs)

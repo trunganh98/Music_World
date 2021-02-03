@@ -22,6 +22,7 @@ namespace MusicWorld.Controllers
             {
 
                 Songs = repository.Songs
+                .Where(p => p.Category == "Rap")
                 .OrderBy(p => p.Id)
                 .Take(6),
                 Events = repository.Events
@@ -40,6 +41,7 @@ namespace MusicWorld.Controllers
             {
 
                 Songs = repository.Songs
+                .Where(p => p.Category == "Rock")
                 .OrderBy(p => p.Id)
                 .Take(6),
                 Events = repository.Events
@@ -58,6 +60,7 @@ namespace MusicWorld.Controllers
             {
 
                 Songs = repository.Songs
+                .Where(p => p.Category == "Pop")
                 .OrderBy(p => p.Id)
                 .Take(6),
                 Events = repository.Events
@@ -77,6 +80,7 @@ namespace MusicWorld.Controllers
             {
 
                 Songs = repository.Songs
+                .Where(p => p.Category == "Jazz")
                 .OrderBy(p => p.Id)
                 .Take(6),
                 Events = repository.Events
@@ -113,6 +117,7 @@ namespace MusicWorld.Controllers
             {
 
                 Songs = repository.Songs
+                .Where(p=> p.Category == "Ballad")
                 .OrderBy(p => p.Id)
                 .Take(6),
                 Events = repository.Events

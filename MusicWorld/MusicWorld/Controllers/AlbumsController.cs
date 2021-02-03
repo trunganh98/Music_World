@@ -99,6 +99,7 @@ namespace MusicWorld.Controllers
             {
 
                 Songs = repository.Songs
+                .Where(p => p.Category == "Classical")
                 .OrderBy(p => p.Id)
                 .Take(6),
                 Events = repository.Events

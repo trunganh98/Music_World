@@ -15,7 +15,7 @@ namespace MusicWorld.Models
         public string Author { get; set; }
         [Display(Name = "Image")]
         public string UrlImage { get; set; }
-
+        public string UrlMp3 { get; set; }
         public int ArtistsId { get; set; }
         public Artists Artists { get; set; }
 

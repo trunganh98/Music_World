@@ -30,7 +30,7 @@
                             <div class="single-album">
                                 <img class="imgalbum" src="~/img/Music/Classical/@item.UrlImage" alt="img">
                                 <div class="album-info">
-                                    <a href="#">
+                                    <a href="#" class="text-center">
                                         <h5>@item.Title</h5>
                                     </a>
                                     <p>@item.StartingDate</p>
@@ -76,7 +76,7 @@
                                 </div>
                             </div>
                             <div class="album-info">
-                                <a href="#">
+                                <a href="#" class="text-center">
                                     <h5>@item.Title</h5>
                                 </a>
                                 <p>@item.Artists</p>
@@ -231,7 +231,7 @@
                                     </div>
                                 </div>
                                 <audio preload="auto" controls>
-                                    <source src="/audio/dummy-audio.mp3">
+                                    <source src="/audio/@item.UrlMp3">
                                 </audio>
                             </div>
                         }

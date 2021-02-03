@@ -145,6 +145,9 @@ namespace MusicWorld.Migrations
                     b.Property<string>("UrlImage")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("UrlMp3")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.HasIndex("AlbumsId");

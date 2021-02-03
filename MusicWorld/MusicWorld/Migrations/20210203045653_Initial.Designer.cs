@@ -9,7 +9,7 @@ using MusicWorld.Models;
 namespace MusicWorld.Migrations
 {
     [DbContext(typeof(MusicDbContext))]
-    [Migration("20210129043905_Initial")]
+    [Migration("20210203045653_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -145,6 +145,9 @@ namespace MusicWorld.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UrlImage")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UrlMp3")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");

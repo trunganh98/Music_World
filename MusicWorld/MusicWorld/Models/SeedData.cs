@@ -563,6 +563,7 @@ namespace MusicWorld.Models
                         Title = "OK",
                         Author = "BinZ",
                         UrlImage = "OK.jpg",
+                        UrlMp3 = "Ok.mp3",
                         Category = "Rap",
                         ArtistsId = artists.Single(a => a.Name == "BinZ").Id,
                         AlbumsId = albums.Single(a => a.Title == "Rap Việt hay").Id
@@ -572,6 +573,7 @@ namespace MusicWorld.Models
                         Title = "Yêu em quá đi",
                         Author = "Karik",
                         UrlImage = "Yeuemquadi.jpg",
+                        UrlMp3="YeuEmQuaDi.mp3",
                         Category = "Pop",
                         ArtistsId = artists.Single(a => a.Name == "Karik").Id,
                         AlbumsId = albums.Single(a => a.Title == "Rap Việt hay").Id
@@ -581,6 +583,7 @@ namespace MusicWorld.Models
                         Title = "Từng là tất cả",
                         Author = "Karik",
                         UrlImage = "Tunglatatca.jpg",
+                        UrlMp3 = "TungLaTatCa.mp3",
                         Category = "Pop",
                         ArtistsId = artists.Single(a => a.Name == "Karik").Id,
                         AlbumsId = albums.Single(a => a.Title == "Rap Việt hay").Id
@@ -590,6 +593,7 @@ namespace MusicWorld.Models
                         Title = "Không ổn",
                         Author = "Karik",
                         UrlImage = "Khongon.jpg",
+                        UrlMp3 = "KhongOn.mp3",
                         Category = "Pop",
                         ArtistsId = artists.Single(a => a.Name == "Karik").Id,
                         AlbumsId = albums.Single(a => a.Title == "Top Trending youtube").Id
@@ -599,6 +603,7 @@ namespace MusicWorld.Models
                         Title = "Crying Over You",
                         Author = "Justatee",
                         UrlImage = "Crying.jpg",
+                        UrlMp3="YeuEmQuaDi.mp3",
                         Category = "Pop",
                         ArtistsId = artists.Single(a => a.Name == "Justatee").Id,
                         AlbumsId = albums.Single(a => a.Title == "Rap Việt hay").Id
@@ -608,6 +613,7 @@ namespace MusicWorld.Models
                         Title = "Đố em biết anh đang nghĩ gì",
                         Author = "Đen Vâu",
                         UrlImage = "Doembiet.jpg",
+                        UrlMp3="YeuEmQuaDi.mp3",
                         Category = "Rap",
                         ArtistsId = artists.Single(a => a.Name == "Đen Vâu").Id,
                         AlbumsId = albums.Single(a => a.Title == "Top Trending youtube").Id
@@ -617,6 +623,7 @@ namespace MusicWorld.Models
                         Title = "Hai triệu năm",
                         Author = "Đen Vâu",
                         UrlImage = "2trieunam.jpg",
+                        UrlMp3="YeuEmQuaDi.mp3",
                         Category = "Rap",
                         ArtistsId = artists.Single(a => a.Name == "Đen Vâu").Id,
                         AlbumsId = albums.Single(a => a.Title == "Top Trending youtube").Id
@@ -626,6 +633,7 @@ namespace MusicWorld.Models
                         Title = "Cảm ơn",
                         Author = "Đen Vâu",
                         UrlImage = "denvau.jpg",
+                        UrlMp3="YeuEmQuaDi.mp3",
                         Category = "Rap",
                         ArtistsId = artists.Single(a => a.Name == "Đen Vâu").Id,
                         AlbumsId = albums.Single(a => a.Title == "Rap Việt hay").Id
@@ -635,6 +643,7 @@ namespace MusicWorld.Models
                         Title = "Thiên đàng",
                         Author = "Wowy",
                         UrlImage = "Thiendang.jpg",
+                        UrlMp3="YeuEmQuaDi.mp3",
                         Category = "Rap",
                         ArtistsId = artists.Single(a => a.Name == "Wowy").Id,
                         AlbumsId = albums.Single(a => a.Title == "Top Trending youtube").Id
@@ -644,6 +653,7 @@ namespace MusicWorld.Models
                         Title = "Bay thật xa",
                         Author = "Wowy",
                         UrlImage = "Bay.jpg",
+                        UrlMp3="YeuEmQuaDi.mp3",
                         Category = "Rap",
                         ArtistsId = artists.Single(a => a.Name == "Wowy").Id,
                         AlbumsId = albums.Single(a => a.Title == "Rap Việt hay").Id
@@ -653,6 +663,7 @@ namespace MusicWorld.Models
                         Title = "Hướng dương",
                         Author = "Wowy",
                         UrlImage = "Huongduong.jpg",
+                        UrlMp3 = " ",
                         Category = "Rap",
                         ArtistsId = artists.Single(a => a.Name == "Wowy").Id,
                         AlbumsId = albums.Single(a => a.Title == "Top Trending youtube").Id
@@ -661,6 +672,7 @@ namespace MusicWorld.Models
                   Title = "Một Bước Yêu Vạn Dặm Đau",
                     Author = "Mr.siro",
                     UrlImage = "mrsiro_1.jpg",
+                    UrlMp3 = " ",
                     Category = "Ballad",
                     ArtistsId = artists.Single(a => a.Name == "Mr.siro").Id,
                     AlbumsId = albums.Single(a => a.Title == "Top HITS của năm").Id
@@ -670,6 +682,7 @@ namespace MusicWorld.Models
                   Title = "Lắng Nghe Nước Mắt",
                     Author = "Mr.siro",
                     UrlImage = "mrsiro_2.jpg",
+                    UrlMp3 = " ",
                     Category = "Ballad",
                     ArtistsId = artists.Single(a => a.Name == "Mr.siro").Id,
                     AlbumsId = albums.Single(a => a.Title == "Những bản nhạc việt hiện đại").Id
@@ -679,6 +692,7 @@ namespace MusicWorld.Models
                   Title = "Chiều nay không có mưa bay",
                     Author = "Trung Quân",
                     UrlImage = "trungquan_1.jpg",
+                    UrlMp3 = " ",
                     Category = "Ballad",
                     ArtistsId = artists.Single(a => a.Name == "Trung Quân").Id,
                     AlbumsId = albums.Single(a => a.Title == "Những bài hát được nghe nhiều").Id
@@ -687,6 +701,7 @@ namespace MusicWorld.Models
                   Title = "Dấu Mưa",
                     Author = "Trung Quân",
                     UrlImage = "trungquan_2.jpg",
+                    UrlMp3 = " ",
                     Category = "Balland",
                     ArtistsId = artists.Single(a => a.Name == "Trung Quân").Id,
                     AlbumsId = albums.Single(a => a.Title == "Những bài hát được nghe nhiều").Id
@@ -695,6 +710,7 @@ namespace MusicWorld.Models
                   Title = "Bèo dạt mây trôi",
                     Author = "Trần Mạnh Tuấn",
                     UrlImage = "Tranmanhtuan_1.jpg",
+                    UrlMp3 = " ",
                     Category = "Jazz",
                     ArtistsId = artists.Single(a => a.Name == "Trần Mạnh Tuấn").Id,
                     AlbumsId = albums.Single(a => a.Title == "Những bản nhạc jazz hay nhất").Id
@@ -703,6 +719,7 @@ namespace MusicWorld.Models
                   Title = "Quê Hương",
                     Author = "Trần Mạnh Tuấn",
                     UrlImage = "Tranmanhtuan_2.jpg",
+                    UrlMp3 = " ",
                     Category = "Jazz",
                     ArtistsId = artists.Single(a => a.Name == "Trần Mạnh Tuấn").Id,
                     AlbumsId = albums.Single(a => a.Title == "Những bản nhạc jazz hay nhất").Id
@@ -711,6 +728,7 @@ namespace MusicWorld.Models
                   Title = "Đường Đến Vinh Quang",
                     Author = "Trần Lập",
                     UrlImage = "TranLap_1.jpg",
+                    UrlMp3 = " ",
                     Category = "Rock",
                     ArtistsId = artists.Single(a => a.Name == "Trần Lập").Id,
                     AlbumsId = albums.Single(a => a.Title == "Chặng Đường Rock Việt").Id
@@ -719,6 +737,7 @@ namespace MusicWorld.Models
                   Title = "Tâm Hồn Của Đá ",
                     Author = "Trần Lập",
                     UrlImage = "TranLap_2.jpg",
+                    UrlMp3 = " ",
                     Category = "Rock",
                     ArtistsId = artists.Single(a => a.Name == "Trần Lập").Id,
                     AlbumsId = albums.Single(a => a.Title == "Chặng Đường Rock Việt").Id
@@ -727,6 +746,7 @@ namespace MusicWorld.Models
                   Title = "Bao giờ lấy chồng",
                     Author = "Bích Phương",
                     UrlImage = "bichphuong_3.jpg",
+                    UrlMp3 = " ",
                     Category = "Ballad",
                     ArtistsId = artists.Single(a => a.Name == "Bích Phương").Id,
                     AlbumsId = albums.Single(a => a.Title == "Những bản nhạc việt hiện đại").Id
@@ -735,6 +755,7 @@ namespace MusicWorld.Models
                   Title = "Em bỏ hút thuốc chưa",
                     Author = "Bích Phương",
                     UrlImage = "bichphuong_5.jpg",
+                    UrlMp3 = "EmBoHutThuocChua.mp3",
                     Category = "Ballad",
                     ArtistsId = artists.Single(a => a.Name == "Bích Phương").Id,
                     AlbumsId = albums.Single(a => a.Title == "Những bản nhạc việt hiện đại").Id
@@ -744,6 +765,7 @@ namespace MusicWorld.Models
                         Title = "The Legend of 1900 Playing love",
                         Author = "YO YO MA",
                         UrlImage = "baihat3.jpg",
+                        UrlMp3 = " ",
                         Category = "Classical",
                         ArtistsId = artists.Single(a => a.Name == "YO YO MA").Id,
                         AlbumsId = albums.Single(a => a.Title == "Những Bản nhạc cổ điển hay").Id

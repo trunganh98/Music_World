@@ -98,7 +98,7 @@ namespace MusicWorld.Controllers
                 .Take(6),
                 Events = repository.Events
                 .OrderBy(a => a.Id)
-                .Take(5),
+                ,
                 Albums = repository.Albums
                 .OrderBy(a => a.Id)
                 .Take(12),

@@ -119,6 +119,7 @@ namespace MusicWorld.Migrations
                     Category = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Author = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UrlImage = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UrlMp3 = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ArtistsId = table.Column<int>(type: "int", nullable: false),
                     AlbumsId = table.Column<int>(type: "int", nullable: false)
                 },
